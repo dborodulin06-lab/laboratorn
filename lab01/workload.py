@@ -1,0 +1,11 @@
+one_pred = input('1 предмет: ')
+two_pred = input('2 предмет: ')
+kol_1 = int(input('количество занятий по каждому предмету за неделю: '))
+kol_2 = int(input('количество занятий в неделю 2 предмета: '))
+time1 = int(input('продолжительность 1 занятия: '))
+time2 = int(input('продолжительность 2 занятия: '))
+vrem = int(input('доступное время на неделю: '))
+nagruz = (kol_1 * time1) + (kol_2 * time2)
+if kol_1 >= 0 and kol_2 >= 2 and time1 > 0 and time2 > 0 and vrem >= round(nagruz/60,2):
+    print(one_pred, kol_1 * kol_2, nagruz, round(nagruz/60,2), vrem - (round(nagruz/60,2)), nagruz*4)
+    print(two_pred, kol_1 * kol_2, nagruz, round(nagruz/60,2), vrem - (round(nagruz/60,2)), nagruz*4)
